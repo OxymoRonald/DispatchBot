@@ -13,6 +13,12 @@ pip install audioop-lts
 Create api token
 https://discord.com/developers/applications
 
+Set intents
+
+![bot.png](_assets/bot.png)
+
+![intents.png](_assets/intents.png)
+
 Add your API token to the secrets_file.py
 ```python
 # Discord API token
