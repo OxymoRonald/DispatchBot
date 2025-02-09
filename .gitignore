@@ -1,2 +1,8 @@
+# Untrack changes to (already tracked) secrets file
+# git update-index --assume-unchanged .\secrets_file.py
+
+# Start tracking again
+# git update-index --no-assume-unchanged .\secrets_file.py
+
 # Ignore the secrets file
 secrets_file.py
