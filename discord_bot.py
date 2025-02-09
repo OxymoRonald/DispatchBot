@@ -135,7 +135,7 @@ class discordBot(discord.Client):
             for user in reactions[self.icon_1]:
                 if user != self.user.id:
                     username = client.get_user(user)
-                    mention_list_1 += f"{username.mention}\n"
+                    mention_list_1 += f"{username.mention} (0m)\n"
                     log_users.append(username.id)
 
         # Make sure the list is at least the proper length
@@ -205,6 +205,9 @@ class discordBot(discord.Client):
                 else:
                     # Update database
                     c.execute("UPDATE timetable SET end = ? WHERE name = ? AND start = ?",(timestamp, item[0], item[1]))
+                    
+                    # Commit
+                    conn.commit()
 
                     # Update logfile
                     with open('discord_bot.csv','a', newline='') as csv_file:
