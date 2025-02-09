@@ -33,8 +33,8 @@ class discordBot(discord.Client):
         self.icon_1 = "🐣"
 
         # Set titles
-        self.title_0 = "--- FTO ---"
-        self.title_1 = "-- Eggie --"
+        self.title_0 = "FTO (available)"
+        self.title_1 = "Eggie (waiting)"
 
         # Set available spaces
         self.available_0 = 8
