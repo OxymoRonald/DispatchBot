@@ -135,7 +135,7 @@ class discordBot(discord.Client):
             for user in reactions[self.icon_1]:
                 if user != self.user.id:
                     username = client.get_user(user)
-                    mention_list_1 += f"{username.mention} (0m)\n"
+                    mention_list_1 += f"{username.mention}\n"
                     log_users.append(username.id)
 
         # Make sure the list is at least the proper length
