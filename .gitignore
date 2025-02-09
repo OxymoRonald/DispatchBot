@@ -6,3 +6,6 @@
 
 # Ignore the secrets file
 secrets_file.py
+
+# Ignore cache directory
+__pycache__
