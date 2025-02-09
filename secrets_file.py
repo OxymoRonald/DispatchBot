@@ -1,0 +1,2 @@
+# Discord API token
+token = ""
