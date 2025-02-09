@@ -1,11 +1,19 @@
 # Untrack changes to (already tracked) secrets file
 # git update-index --assume-unchanged .\secrets_file.py
+# git update-index --assume-unchanged .\discord_bot.db
 
 # Start tracking again
 # git update-index --no-assume-unchanged .\secrets_file.py
+# git update-index --no-assume-unchanged .\discord_bot.db
 
 # Ignore the secrets file
 secrets_file.py
+
+# Ignore logfile
+discord_bot.csv
+
+# Ignore database file
+discord_bot.py
 
 # Ignore cache directory
 __pycache__
