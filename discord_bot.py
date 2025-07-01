@@ -29,12 +29,12 @@ class discordBot(discord.Client):
         self.message_id = message_id
 
         # Set icons
-        self.icon_0 = "🎓"
-        self.icon_1 = "🐣"
+        self.icon_0 = "🚑"
+        self.icon_1 = "👨‍⚕️"
 
         # Set titles
-        self.title_0 = "FTO (available)"
-        self.title_1 = "Eggie (waiting)"
+        self.title_0 = "FTO"
+        self.title_1 = "Trainee"
 
         # Set available spaces
         self.available_0 = 8
@@ -57,7 +57,7 @@ class discordBot(discord.Client):
             return
 
         # Create initial message
-        if message.content.startswith('!initialize ftobot'):
+        if message.content.startswith('!initialize oxymobot'):
             await message.channel.send(f'Initializing!')
 
         # Update "Initializing!" message with message information
@@ -65,11 +65,11 @@ class discordBot(discord.Client):
             message.author.id == self.user.id and 
             message.content.startswith('Initializing')
         ):
-            init_update = f"Author: {message.author.name}\nChannel ID: {message.channel.id}\nMessage ID: {message.id}\nUpdate the secrets file with message and channel and message ID, then \"!start ftobot\""
+            init_update = f"Author: {message.author.name}\nChannel ID: {message.channel.id}\nMessage ID: {message.id}\nUpdate the secrets file with message and channel and message ID, then \"!start oxymobot\""
             await message.edit(content=init_update)
 
         # Update info message with reactable embed
-        if message.content.startswith('!start ftobot'):
+        if message.content.startswith('!start oxymobot'):
 
             # Get message to update
             u_channel = client.get_channel(self.channel_id)
@@ -101,7 +101,7 @@ class discordBot(discord.Client):
         # Create embed
         embed = discord.Embed(
             color=discord.Color.orange(),
-            title="FTO / Eggie availability"
+            title="FTO / Trainee availability"
         )    
 
         # Set embed footer
